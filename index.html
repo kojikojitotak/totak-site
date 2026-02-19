@@ -12,25 +12,52 @@ body {
   color: #333;
 }
 
+/* ===== ヘッダー ===== */
 header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 15px 40px;
   background: white;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
+.left-header {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-  height: 45px;
+  height: 40px;
   margin-right: 15px;
 }
 
 .company-name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   color: #1a4fa3;
 }
 
+/* ===== 検索エリア ===== */
+.search-box input {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.search-box button {
+  padding: 8px 12px;
+  font-size: 14px;
+  background: #1a4fa3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #163f85;
+}
+
+/* ===== ヒーロー ===== */
 .hero {
   padding: 80px 40px;
   text-align: center;
@@ -39,15 +66,15 @@ header {
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 34px;
   margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 18px;
-  opacity: 0.9;
 }
 
+/* ===== セクション ===== */
 .section {
   padding: 60px 40px;
   max-width: 900px;
@@ -68,12 +95,28 @@ header {
 }
 </style>
 
+<script>
+function searchEmployee() {
+  const id = document.getElementById("empId").value.trim();
+  if (id === "") return;
+
+  window.location.href = id + ".html";
+}
+</script>
+
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="株式会社TOTAK ロゴ" class="logo">
-  <div class="company-name">株式会社TOTAK</div>
+  <div class="left-header">
+    <img src="logo.png" alt="株式会社TOTAK ロゴ" class="logo">
+    <div class="company-name">株式会社TOTAK</div>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="empId" placeholder="従業員番号を入力">
+    <button onclick="searchEmployee()">検索</button>
+  </div>
 </header>
 
 <section class="hero">
