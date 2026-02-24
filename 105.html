@@ -2,38 +2,111 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>内部管理ログ</title>
+<title>スタッフ #105 | 株式会社TOTAK</title>
 <style>
 body {
-  background: black;
-  color: #00ff88;
-  font-family: monospace;
-  padding: 40px;
+  margin:0;
+  font-family:"Segoe UI", sans-serif;
+  background:#0f172a;
+  color:#e2e8f0;
+}
+
+header {
+  display:flex;
+  align-items:center;
+  padding:15px 40px;
+  background:#111827;
+  border-bottom:1px solid #1f2937;
+}
+
+.logo { height:40px; margin-right:15px; opacity:0.7; }
+.company-name { font-size:20px; font-weight:bold; color:#94a3b8; }
+
+.page-hero {
+  padding:60px 40px;
+  background:linear-gradient(to right,#111827,#1e293b);
+}
+
+.page-hero h1 {
+  margin:0;
+  font-size:28px;
+  letter-spacing:2px;
+  color:#f87171;
+}
+
+.card {
+  background:#111827;
+  padding:40px;
+  max-width:800px;
+  margin:40px auto;
+  border-radius:10px;
+  border:1px solid #1f2937;
+}
+
+.card p { font-size:16px; margin:14px 0; }
+.card b { color:#f87171; }
+
+.warning {
+  margin-top:30px;
+  padding:20px;
+  background:#1e293b;
+  border-left:4px solid #f87171;
+  font-size:14px;
+  color:#fca5a5;
+}
+
+.clear-button {
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 24px;
+  background:#f87171;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.clear-button:hover {
+  background:#ef4444;
+}
+
+footer {
+  text-align:center;
+  padding:30px;
+  background:#111827;
+  color:#64748b;
+  font-size:14px;
 }
 </style>
 </head>
 <body>
 
-<h1>内部管理ログ</h1>
+<header>
+<img src="logo.png" class="logo">
+<div class="company-name">株式会社TOTAK</div>
+</header>
 
-<pre>
-Case ID: 105
+<section class="page-hero">
+<h1>スタッフ情報</h1>
+</section>
 
-処理日: 20██/██/██
-ステータス: 削除済
+<div class="card">
+<p><b>従業員番号：</b>105</p>
+<p><b>氏名：</b> ―― データ不完全 ――</p>
+<p><b>配属：</b> 記録なし</p>
+<p><b>ステータス：</b> 確認不能</p>
+<p><b>評価：</b> 該当データなし</p>
 
-適性評価: 不適合
-再配置プロトコル: 実行完了
-記憶処理: 成功
+<div class="warning">
+※ 当該スタッフの正式記録は存在しません。<br>
+データベース照合により異常が検出されました。
+</div>
 
-識別番号は再利用されました。
+<a href="clear.html" class="clear-button">調査完了へ進む</a>
+</div>
 
-備考:
-対象は修正後勤務予定。
-このサイトの閲覧記録は保存され順次特定します。
-</pre>
+<footer>© 2025 TOTAK Co., Ltd.</footer>
 
 </body>
 </html>
-
-
